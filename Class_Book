@@ -1,8 +1,31 @@
+#pragma once
 #include<iostream>
 #include<string>
 using namespace std;
 
-class Book{
-
+class Book {
+	string* BookFIO_H_W_M_I;
+	static int Count;
+public:
+	Book():BookFIO_H_W_M_I{new string[5]} {
+		setBookFIO_H_W_M_I();
+	}
+	void setBookFIO_H_W_M_I() {
+		string* BookFIO_H_W_M_I = new string[5];
+		Count++;
+		for (int i = 0; i < 5; i++)	{
+			switch (i)	{
+			case 0:	cout << "enter FIO students"<<Count<<": "; getline(cin, BookFIO_H_W_M_I[i]);break;
+			case 1:	cout << "enter Home Phone students" <<Count<<": "; getline(cin, BookFIO_H_W_M_I[i]); break;
+			case 2:	cout << "enter Work Phone students"<< Count<<": "; getline(cin, BookFIO_H_W_M_I[i]); break;
+			case 3:	cout << "enter Mobile Phone students"<<Count<<": "; getline(cin, BookFIO_H_W_M_I[i]); break;
+			case 4:	cout << "enter info students"<<Count<<": "; getline(cin, BookFIO_H_W_M_I[i]); break;
+			}
+		}
+		for (int i = 0; i < 5; i++)		{
+			this->BookFIO_H_W_M_I[i] = BookFIO_H_W_M_I[i];
+		}
+		delete[] BookFIO_H_W_M_I;
+	}
 
 };
