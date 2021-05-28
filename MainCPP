@@ -1,9 +1,10 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
+#include "Class_Book.h"
 using namespace std;
 
+int Book::Count{ 0 };
 int main(){
+	Book BookPhone[3];
 
-
-system("Pause"); return 0;
 }
